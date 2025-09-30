@@ -1,0 +1,29 @@
+---
+title: "tmap_intro"
+format: html
+editor: visual
+---
+
+```{r}
+install.packages("sf")
+install.packages("stars")
+install.packages("tmap")
+```
+
+You can add options to executable code like this
+
+```{r}
+library(sf) # for vector data (more soon!)
+library(stars) # for raster data (more soon!)
+library(tmap) # for static and interactive maps
+library(here)
+```
+
+# raster of global elevations
+world_elevation \<- read_stars(here("data","week1","worldelevation.tif"))
+
+# country boundaries
+world_vector \<- read_sf(here("data","week1","worldvector.gpkg"))
+
+# major cities
+world_cities \<- read_sf(here("data","week1","worldcities.gpkg"))
