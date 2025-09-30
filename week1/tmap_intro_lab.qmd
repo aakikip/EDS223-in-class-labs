@@ -19,11 +19,17 @@ library(tmap) # for static and interactive maps
 library(here)
 ```
 
+```{r}
 # raster of global elevations
-world_elevation \<- read_stars(here("data","week1","worldelevation.tif"))
+world_elevation <- read_stars(here("week1","data","worldelevation.tif"))
+```
 
+```{r}
 # country boundaries
-world_vector \<- read_sf(here("data","week1","worldvector.gpkg"))
+world_vector <- read_sf(here("week1","data","worldvector.gpkg"))
+```
 
+```{r}
 # major cities
-world_cities \<- read_sf(here("data","week1","worldcities.gpkg"))
+world_cities <- read_sf(here("week1","data","worldcities.gpkg"))
+```
